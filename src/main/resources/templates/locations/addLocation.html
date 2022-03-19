@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="#{addLocation.title}">Add location</h1>
+<form action="#" th:action="@{/locations}" th:object="${location}" method="post">
+    <p th:text="#{addLocation.id}">Id: <input type="text" th:field="*{id}" /></p>
+    <p th:text="#{addLocation.latitud}">Latitud: <input type="text" th:field="*{latitud}" /></p>
+    <p th:text="#{addLocation.longitud}">Longitud: <input type="text" th:field="*{longitud}" /></p>
+    <p th:text="#{addLocation.city}">City: <input type="text" th:field="*{city}" /></p>
+    <p th:text="#{addLocation.state}">State: <input type="text" th:field="*{state}" /></p>
+    <input type="submit" th:value="#{addLocation.submit}"/> <input type="reset" th:value="#{addLocation.reset}"/>
+</form>
+</body>
+</html>

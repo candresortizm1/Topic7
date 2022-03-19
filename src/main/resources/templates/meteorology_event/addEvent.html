@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="#{addLocation.title}">Add Event</h1>
+<form action="#" th:action="@{/meteorologyEvent}" th:object="${meteorologyEvent}" method="post">
+    <p th:text="#{addEvent.latitud}">Latitud: <input type="text" th:field="*{latitud}" /></p>
+    <p th:text="#{addEvent.longitud}">Longitud: <input type="text" th:field="*{longitud}" /></p>
+    <p th:text="#{addEvent.city}">City: <input type="text" th:field="*{city}" /></p>
+    <p th:text="#{addEvent.state}">State: <input type="text" th:field="*{state}" /></p>
+    <input type="submit" th:value="#{addLocation.submit}"/> <input type="reset" th:value="#{addLocation.reset}"/>
+</form>
+</body>
+</html>
